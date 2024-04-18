@@ -67,7 +67,7 @@ function renderTaskList() {
 
     const doneList = $('#done-cards');
     doneList.empty();
-
+    taskList = [];
     for (let task of taskList) {
         if (task.status === 'to-do') {
             todoList.append(createTaskCard(task));
