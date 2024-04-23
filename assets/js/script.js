@@ -1,5 +1,5 @@
 // Both lines of code are pulling data from local storage elements, then translating it into the JSON format, it then pushes it into a JavaScript object, the variable is defined as the object to be used later in the code. 
-let taskList = JSON.parse(localStorage.getItem("tasks"));
+let taskList = JSON.parse(localStorage.getItem("tasks")) || [];
 let nextId = JSON.parse(localStorage.getItem("nextId"));
 
 // This function is to generate a uhnique numerical ID for each indivudual task, therefore it will not confuse the loal storage for generating task lists.
