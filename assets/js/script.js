@@ -80,7 +80,7 @@ const newTask = {
 
 //This function sets up the status collumns of task cards
 function renderTaskList() {
-  taskList =  JSON.parse(localStorage.getItem("tasks"));
+  taskList =  JSON.parse(localStorage.getItem("tasks")) || [];
 
     //Defining a variable by selecting the Id todo-cards from index.html using JQuery
     const todoList = $('#todo-cards');
