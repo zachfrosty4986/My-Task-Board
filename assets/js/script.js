@@ -80,6 +80,7 @@ const newTask = {
 
 //This function sets up the status collumns of task cards
 function renderTaskList() {
+  taskList =  JSON.parse(localStorage.getItem("tasks"));
 
     //Defining a variable by selecting the Id todo-cards from index.html using JQuery
     const todoList = $('#todo-cards');
@@ -185,15 +186,15 @@ function handleDrop(event, ui) {
     //Defining a variable by pulling data from the 'tasks attribute in localStorage
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     //Testing one of the function parameters by console logging
-    console.log(ui)
+    // console.log(ui)
     //This refers to the element that is triggered in the event, then the Id element is retreived using JQuery
     const laneId = $(this).attr("id")
     //Console logging laneID to test if it pulled the ID attribute
-    console.log(laneId)
+    // console.log(laneId)
     //Defining a variable to store the value of taskid attribte from the drag element 
     const taskID = ui.draggable[0].dataset.taskid
     //Console logging the variable to test if it stored the data
-    console.log(taskID)
+    // console.log(taskID)
     //This for loop updated the laneId for the task cards by their Ids. 
     for (const task of tasks) {
       //If the task card id is the same as the taskID, then it will assign the status property by updating the laneId for a task
@@ -201,6 +202,7 @@ function handleDrop(event, ui) {
             task.status = laneId
         }
     }
+    console.log(tasks);
     //Updates the status change of task cards into localStorage for later use
     localStorage.setItem('tasks', JSON.stringify(tasks));
     //Calling the renderTaskList function to run what is contained within it, and to update the status of individual task cards
