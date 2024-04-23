@@ -5,4 +5,5 @@ When a user enters the site, they can click the "add task" button to prompt a mo
 
 This assignment allowed me to greatly expand my knowledge in JaaScript functions and how they operate. There were a lot of challenges along with this project, but I was able to acheive full functionality!
 
-You can find the published link, here: 
+You can find the published link, here: https://zachfrosty4986.github.io/My-Task-Board/
+
