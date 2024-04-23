@@ -42,7 +42,7 @@ function createTaskCard(task) {
     if (task.dueDate && task.status !== 'done') {
     //Defining a new variable to display the current date and time using dayjs()
         const now = dayjs();
-    //Defining a new variable to compare the current date and time with the due date on the task card
+    // Defining a new variable to compare the current date and time with the due date on the task card
         const taskDueDate = dayjs(task.dueDate, 'DD/MM/YYYY');
 
     //This 'if' statement reads: if what the now variable reads is the same as the taskduedate value, then style it with a warning color to let the person know their task is due today
